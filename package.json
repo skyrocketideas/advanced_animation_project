@@ -1,0 +1,14 @@
+{
+  "name": "theme_12_advanced_animation_project",
+  "version": "0.0.1",
+  "description": "How The Electric Lightbulb Changed The World",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sweatpants Heroes",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

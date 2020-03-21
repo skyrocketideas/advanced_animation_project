@@ -22,6 +22,10 @@ h2 {
 	color: $primary-color;
 }
 
+h3 {
+	font-size: 110px;
+}
+
 /* CSS variables. Not needed for the effect to work. */
 :root {
 	--base: #f7392b;
@@ -53,4 +57,12 @@ h2 {
 	opacity: var(--opacity);
 	position: relative;
 	width: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+#testy {
+	display: grid;
 }

@@ -1,5 +1,5 @@
 "use strict";
-
+// require(@babel/polyfill);
 window.addEventListener("DOMContentLoaded", start);
 
 gsap.registerPlugin(MotionPathPlugin);
@@ -20,7 +20,7 @@ function start() {
 // fetch Instagram feed from API
 function getInstagram() {
 	console.log("getInstagram");
-	fetch("test.json")
+	fetch("json/test2.json")
 		.then(response => {
 			return response.json();
 		})
@@ -43,5 +43,6 @@ function showData(post) {
 	} else {
 		console.log("Hmmmmm");
 	}
+	copy.querySelector(".biggy").textContent = post.interesting;
 	document.getElementById("testy").appendChild(copy);
 }

@@ -1,26 +1,28 @@
 {
-	"datamaster": [
+	"images": [
 		{
-			"username": "therevengeuk",
-			"media_type": "IMAGE",
-			"timestamp": "2020-03-06T14:43:04+0000",
-			"interesting": "Yodel",
-			"media_url": "img/1.jpg",
-			"id": "17859838747756880"
+			"title": "any_title",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
 		},
 		{
-			"username": "therevengeuk",
-			"media_type": "IMAGE",
-			"interesting": "Bingo!!!!",
-			"timestamp": "2020-02-16T21:12:50+0000",
-			"media_url": "https://scontent.xx.fbcdn.net/v/t51.2885-15/84550541_504587746927016_575965546780405752_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=1xG7A1Fz0mAAX_8zrP_&_nc_ht=scontent.xx&oh=9e03beb88c62baa82785d824396ce6f6&oe=5E95B3E8",
-			"id": "17853839653841058"
+			"title": "any_title",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
 		}
 	],
-	"magickingdom": [
+	"audio": [
 		{
-			"burger": "cheese",
-			"fries": "yes"
+			"title": "any_title",
+			"media_type": "audio",
+			"media_url": "img/star_background.svg"
+		}
+	],
+	"video": [
+		{
+			"title": "any_title",
+			"media_type": "video",
+			"media_url": "img/star_background.svg"
 		}
 	]
 }

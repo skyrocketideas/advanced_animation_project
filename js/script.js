@@ -1,4 +1,3 @@
-// import "@babel/polyfill";
 // require (@babel/polyfill);
 "use strict";
 
@@ -7,7 +6,6 @@ window.addEventListener("DOMContentLoaded", start);
 gsap.registerPlugin(MotionPathPlugin);
 gsap.from(".anim", { duration: 3, stagger: 1, y: 100 });
 
-// start function to listen for events
 function start() {
 	// console.log("start");
 	getData();
@@ -17,7 +15,12 @@ async function getData() {
 	const api_url = "json/test2.json";
 	const response = await fetch(api_url);
 	const data = await response.json();
-	console.log(data);
+	console.log(data.images[2].title);
+	showData(data);
+}
+
+function showData(data) {
+	document.querySelector("#testy").textContent = data.images[2].title;
 }
 
 // function getInstagram() {

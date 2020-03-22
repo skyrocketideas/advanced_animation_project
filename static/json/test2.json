@@ -9,6 +9,11 @@
 			"title": "any_title",
 			"media_type": "image",
 			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "Graemes",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
 		}
 	],
 	"audio": [

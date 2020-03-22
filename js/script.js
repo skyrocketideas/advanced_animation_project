@@ -25,24 +25,28 @@ function getInstagram() {
 			return response.json();
 		})
 		.then(allPosts => {
-			allPosts.data.forEach(post => {
+			allPosts.magickingdom.forEach(post => {
 				showData(post);
 				console.log(post.timestamp);
 			});
 		});
 }
 
+// function showData(post) {
+// 	console.log("showData");
+// 	const template = document.querySelector("template").content;
+// 	const copy = template.cloneNode(true);
+// 	// console.log(post);
+// 	// copy.querySelector(".biggy").textContent = post.interesting;
+// 	copy.querySelector(".data_image").src = post.media_url;
+// 	document.getElementById("testy").appendChild(copy);
+// }
+
 function showData(post) {
 	console.log("showData");
 	const template = document.querySelector("template").content;
 	const copy = template.cloneNode(true);
 	// console.log(post);
-	if (post.media_type === "IMAGE") {
-		copy.querySelector(".data_image").src = post.media_url;
-		// copy.querySelector(".data_image").style.display = "none";
-	} else {
-		console.log("Hmmmmm");
-	}
-	copy.querySelector(".biggy").textContent = post.interesting;
-	document.getElementById("testy").appendChild(copy);
+	copy.querySelector(".biggy").textContent = post.burger;
+	document.getElementById("embassy").appendChild(copy);
 }

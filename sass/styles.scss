@@ -42,12 +42,19 @@ h1 {
 
 #sceneOne {
 	background-color: var(--bg-color-scene-1);
+}
+
+#sceneOne,
+#sceneTwo,
+#sceneThree {
+	padding: 10rem;
 	height: 100vh;
 }
 
-#sceneTwo {
-	background-color: var(--bg-color-scene-2);
-	height: 100vh;
+#sceneOneText,
+#sceneTwoText,
+#sceneThreeText {
+	font-size: 2rem;
 }
 
 #sceneThree {
@@ -60,12 +67,12 @@ h1 {
 // 	height: 100vh;
 // }
 
-#island {
-	position: absolute;
-	color: yellow;
-	font-size: 70px;
-	transform: translateZ(1px) translateX(500px) scale(3.5);
-	box-shadow: 10px 10px 37px 1px rgba(0, 0, 0, 0.75);
-	/* animation: var(--animation-one); */
-	filter: blur(3px);
-}
+// #island {
+// 	position: absolute;
+// 	color: yellow;
+// 	font-size: 70px;
+// 	transform: translateZ(1px) translateX(500px) scale(3.5);
+// 	box-shadow: 10px 10px 37px 1px rgba(0, 0, 0, 0.75);
+// 	/* animation: var(--animation-one); */
+// 	filter: blur(3px);
+// }

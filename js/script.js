@@ -17,14 +17,27 @@ function start() {
 
 // get data from API
 async function getData() {
-	const api_url = "json/scenes.json";
+	const api_url = "img/world.svg";
 	const response = await fetch(api_url);
-	const data = await response.json();
-	// console.log(data.images[2].title);
+	const data = await response.text();
 	showData(data);
 }
 
+// or ...
+// can we do this?
+//
+// async function getData() {
+// const api_url = "json/scenes.json";
+// const response = await fetch(api_url);
+// const data = await response.json();
+// showData(data);
+//
+// then take an image from the json object
+// and put it in the DOM so we can manipulate the parts of it there?
+// (like the coloring book)
+
 // show data from API
 function showData(data) {
-	document.querySelector(".scene_heading").textContent = data.scene_one[0].title;
+	document.querySelector("#scene_three_bg").innerHTML = data;
+	// document.querySelector("#scene_three_bg").innerHTML = data.scene_three[0].media_url;
 }

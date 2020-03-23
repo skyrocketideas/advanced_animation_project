@@ -11,20 +11,34 @@ gsap.registerPlugin(MotionPathPlugin);
 
 // start function
 function start() {
-	// console.log("start");
-	getData();
+  // console.log("start");
+  getData();
 }
 
 // get data from API
-async function getData() {
-	const api_url = "json/scenes.json";
+function getData() {
+  /*const api_url = "json/scenes.json";
 	const response = await fetch(api_url);
 	const data = await response.json();
 	// console.log(data.images[2].title);
-	showData(data);
+	showData(data);*/
+
+  fetch("img/indexDark.svg")
+    .then(response => response.text())
+    .then(mySvgData => {
+      document.querySelector("#sceneOne").innerHTML = mySvgData;
+    });
+  //let mySvgData = await response.json();
+  //console.log(mySvgData);
+
+  showData();
 }
 
 // show data from API
-function showData(data) {
+/*function showData(data) {
 	document.querySelector(".scene_heading").textContent = data.scene_one[0].title;
+}*/
+
+function showData() {
+  let startpage = document.querySelector("#startpage");
 }

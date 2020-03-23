@@ -51,9 +51,6 @@ h1 {
 }
 
 #sceneThree {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
 	background-color: var(--bg-color-scene-3);
 	height: 100vh;
 }

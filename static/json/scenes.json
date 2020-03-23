@@ -1,0 +1,53 @@
+{
+	"scene_one": [
+		{
+			"title": "scene_1_image",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_1_audio",
+			"media_type": "audio",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_1_video",
+			"media_type": "video",
+			"media_url": "img/star_background.svg"
+		}
+	],
+	"scene_two": [
+		{
+			"title": "scene_2_image",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_2_audio",
+			"media_type": "audio",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_2_video",
+			"media_type": "video",
+			"media_url": "img/star_background.svg"
+		}
+	],
+	"scene_three": [
+		{
+			"title": "scene_3_image",
+			"media_type": "image",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_3_audio",
+			"media_type": "audio",
+			"media_url": "img/star_background.svg"
+		},
+		{
+			"title": "scene_3_video",
+			"media_type": "video",
+			"media_url": "img/star_background.svg"
+		}
+	]
+}

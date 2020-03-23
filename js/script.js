@@ -3,44 +3,28 @@
 
 window.addEventListener("DOMContentLoaded", start);
 
+// setup gsap
 gsap.registerPlugin(MotionPathPlugin);
-gsap.from(".anim", { duration: 3, stagger: 1, y: 100 });
 
+// gsap test animation
+// gsap.from(".anim", { duration: 3, stagger: 1, y: 100 });
+
+// start function
 function start() {
 	// console.log("start");
 	getData();
 }
 
+// get data from API
 async function getData() {
-	const api_url = "json/test2.json";
+	const api_url = "json/scenes.json";
 	const response = await fetch(api_url);
 	const data = await response.json();
-	console.log(data.images[2].title);
+	// console.log(data.images[2].title);
 	showData(data);
 }
 
+// show data from API
 function showData(data) {
-	document.querySelector("#testy").textContent = data.images[2].title;
+	document.querySelector(".scene_heading").textContent = data.scene_one[0].title;
 }
-
-// function getInstagram() {
-// 	console.log("getInstagram");
-// 	fetch("json/test2.json")
-// 		.then(response => {
-// 			return response.json();
-// 		})
-// 		.then(allPosts => {
-// 			allPosts.datamaster.forEach(post => {
-// 				showData(post);
-// 				console.log(post.timestamp);
-// 			});
-// 		});
-// }
-
-// function showData(post) {
-// 	console.log("showData");
-// 	const template = document.querySelector("template").content;
-// 	const copy = template.cloneNode(true);
-// 	copy.querySelector(".data_image").src = post.media_url;
-// 	document.getElementById("testy").appendChild(copy);
-// }

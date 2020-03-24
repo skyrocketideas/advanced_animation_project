@@ -48,6 +48,7 @@ h1 {
   margin-left: 50px;
 }
 
+<<<<<<< HEAD
 img {
   width: 100%;
 }
@@ -107,6 +108,27 @@ img {
   .right {
     grid-column: 12;
   }
+=======
+// img {
+// 	width: 100%;
+// }
+
+#sceneOne {
+	background-color: var(--bg-color-scene-1);
+}
+
+#sceneOne,
+#sceneTwo,
+#sceneThree {
+	padding: 10rem;
+	height: 100vh;
+>>>>>>> graeme
+}
+
+#sceneOneText,
+#sceneTwoText,
+#sceneThreeText {
+	font-size: 2rem;
 }
 
 #sceneThree {
@@ -116,3 +138,18 @@ img {
   grid-column: 1 / span 13;
   grid-row: 3;
 }
+
+// #scene_three_bg {
+// 	// grid-column: 1;
+// 	height: 100vh;
+// }
+
+// #island {
+// 	position: absolute;
+// 	color: yellow;
+// 	font-size: 70px;
+// 	transform: translateZ(1px) translateX(500px) scale(3.5);
+// 	box-shadow: 10px 10px 37px 1px rgba(0, 0, 0, 0.75);
+// 	/* animation: var(--animation-one); */
+// 	filter: blur(3px);
+// }

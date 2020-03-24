@@ -20,7 +20,7 @@ async function getData() {
 	const api_url = "json/scenes.json";
 	const response = await fetch(api_url);
 	const data = await response.json();
-	showSceneOne(data);
+	showSceneThree(data);
 	// console.log(data);
 }
 
@@ -32,17 +32,17 @@ async function getData() {
 // guess we need to put it in as 'response.text' instead of 'response.json'?
 // (like the coloring book)
 
-// show data from API
-function showSceneOne(data) {
-	// document.querySelector("#scene_three_bg").innerHTML = data;
-	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
-	showSceneTwo(data);
-}
+// // show data from API
+// function showSceneOne(data) {
+// 	// document.querySelector("#scene_three_bg").innerHTML = data;
+// 	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
+// 	showSceneTwo(data);
+// }
 
-function showSceneTwo(data) {
-	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
-	showSceneThree(data);
-}
+// function showSceneTwo(data) {
+// 	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
+// 	showSceneThree(data);
+// }
 
 function showSceneThree(data) {
 	document.querySelector("#island").src = data.scene_three[0].media_url;

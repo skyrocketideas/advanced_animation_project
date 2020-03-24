@@ -15,36 +15,43 @@ function start() {
 	getData();
 }
 
-// get data from API
 async function getData() {
-	const api_url = "json/scenes.json";
-	const response = await fetch(api_url);
-	const data = await response.json();
-	showSceneThree(data);
+	const api_url = "img/world.svg";
+	let response = await fetch(api_url);
+	let data = await response.text();
+	document.querySelector("#world").innerHTML = data;
+	selectBuildings();
 	// console.log(data);
 }
 
-// or ...
-// can we do this?
-//
-// ... take an image from the json object
-// and put it in the DOM so we can manipulate the parts of it there?
-// guess we need to put it in as 'response.text' instead of 'response.json'?
-// (like the coloring book)
-
-// // show data from API
-// function showSceneOne(data) {
-// 	// document.querySelector("#scene_three_bg").innerHTML = data;
-// 	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
-// 	showSceneTwo(data);
-// }
-
-// function showSceneTwo(data) {
-// 	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
-// 	showSceneThree(data);
-// }
-
-function showSceneThree(data) {
-	document.querySelector("#island").src = data.scene_three[0].media_url;
-	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
+// select buildings
+function selectBuildings() {
+	console.log("selectBuildings");
+	document.querySelectorAll("#house_15_, #house_16_").forEach(element => {
+		element.addEventListener("click", function(event) {
+			let chosenPath = event.target;
+			console.log(chosenPath);
+		});
+	});
 }
+
+// async function getData() {
+// 	const api_url = "json/scenes.json";
+// 	const response = await fetch(api_url);
+// 	const data = await response.json();
+// 	showSceneThree(data);
+// 	// console.log(data);
+// }
+
+// function showSceneThree(data) {
+// 	document.querySelector("#island").src = data.scene_three[0].media_url;
+// 	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
+// }
+
+// async function start() {
+// 	console.log("start");
+// 	let response = await fetch("assets/far_side_cat_fud_mono_too.svg");
+// 	let mySvgData = await response.text();
+// 	document.querySelector(".my_image").innerHTML = mySvgData;
+// 	startManipulatingTheSvg();
+// }

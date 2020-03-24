@@ -127,6 +127,21 @@ img {
 	grid-column: 1 / 13;
 }
 
+.active {
+	display: none;
+}
+
+#lightMiddle_2_ {
+	// display: none;
+	fill: yellow;
+	stroke: yellow;
+	stroke-width: 10px;
+}
+
+#light_114_ {
+	fill: yellow;
+}
+
 // #scene_three_bg {
 // 	// grid-column: 1;
 // 	height: 100vh;

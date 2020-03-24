@@ -62,12 +62,14 @@ h1 {
 	img {
 		margin: auto;
 		grid-column: 1 / span 13;
-		margin-top: 80px;
+
 	}
 
-	.center {
+	.arrow1 {
+		margin: auto;
 		grid-row: 4;
-		margin-top: 300px;
+		grid-column: 1/ span 13;
+		margin-top: 200px;
 	}
 
 	#how-the {
@@ -104,7 +106,7 @@ h1 {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 
-	#homeIcon {
+	.homeIcon {
 		grid-row: 1;
 		grid-column: 1;
 		margin-top: 50px;
@@ -167,9 +169,12 @@ h1 {
 	height: 100vh;
 	width: 100vw;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-column: 1 / span 13;
-	grid-row: 3/4;
+
+
+	.homeIcon2 {
+		margin-left: 50px;
+
+	}
 
 	h1 {
 		margin: auto;

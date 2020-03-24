@@ -11,17 +11,17 @@ gsap.registerPlugin(MotionPathPlugin);
 
 // start function
 function start() {
-	// console.log("start");
-	getData();
+  // console.log("start");
+  getData();
 }
 
 // get data from API
 async function getData() {
-	const api_url = "json/scenes.json";
-	const response = await fetch(api_url);
-	const data = await response.json();
-	showSceneOne(data);
-	// console.log(data);
+  const api_url = "json/scenes.json";
+  const response = await fetch(api_url);
+  const data = await response.json();
+  showSceneThree(data);
+  console.log(data);
 }
 
 // or ...
@@ -34,17 +34,19 @@ async function getData() {
 
 // show data from API
 function showSceneOne(data) {
-	// document.querySelector("#scene_three_bg").innerHTML = data;
-	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
-	showSceneTwo(data);
+  // document.querySelector("#scene_three_bg").innerHTML = data;
+  document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
+  showSceneTwo(data);
 }
 
 function showSceneTwo(data) {
-	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
-	showSceneThree(data);
+  document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
+  showSceneThree(data);
 }
 
 function showSceneThree(data) {
-	document.querySelector("#island").src = data.scene_three[0].media_url;
-	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
+  var world_url = data.scene_three[0].media_url;
+  document.querySelector("#worldImg").src += world_url;
+  //document.querySelector("#island").src = data.scene_three[0].media_url;
+  //document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
 }

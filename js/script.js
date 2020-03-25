@@ -23,26 +23,26 @@ async function getData() {
 	console.log(data);
 }
 
-// show data from API
-function showSceneOne(data) {
-	// document.querySelector("#scene_three_bg").innerHTML = data;
-	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
-	showSceneTwo(data);
-}
-
-// scene 2 show data
-function showSceneTwo(data) {
-	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
-	showSceneThree(data);
-}
-
 // scene 3 show image
 function showSceneThree(data) {
-	var world_url = data.scene_three[0].media_url;
-	document.querySelector("#worldImg").src += world_url;
+	console.log("showSceneThree");
+	const world_url = data.scene_three[0].media_url;
+	document.querySelector("#worldImg").innerHTML = world_url;
 	//document.querySelector("#island").src = data.scene_three[0].media_url;
 	//document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
 }
+
+// show data from API
+// function showSceneOne(data) {
+// 	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
+// 	showSceneTwo(data);
+// }
+
+// // scene 2 show data
+// function showSceneTwo(data) {
+// 	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
+// 	showSceneThree(data);
+// }
 
 // modal
 const modal = document.querySelector(".modal-background");
@@ -78,49 +78,3 @@ function showDetails(data) {
 // 		});
 // 	});
 // }
-
-// // get color
-// function getTheColor() {
-// 	console.log("getTheColor");
-// 	document.querySelectorAll("#color1, #color2, #color3, #color4, #color5, #color6, #color7, #color8").forEach(element => {
-// 		element.addEventListener("click", () => {
-// 			let style = getComputedStyle(element);
-// 			chosenColor = style.backgroundColor;
-// 			element.classList.add("active");
-// 			console.log(style);
-// 			console.log(chosenColor);
-// 		});
-// 	});
-// 	fillShapes();
-// }
-
-// // fill shapes
-// function fillShapes() {
-// 	console.log("fillShapes");
-// 	document.querySelectorAll("#dog").forEach(obj => {
-// 		obj.style.fill = chosenColor;
-// 		console.log(chosenPath);
-// 	});
-// }
-
-// async function getData() {
-// 	const api_url = "json/scenes.json";
-// 	const response = await fetch(api_url);
-// 	const data = await response.json();
-// 	showSceneThree(data);
-// 	// console.log(data);
-// }
-
-// function showSceneThree(data) {
-// 	document.querySelector("#island").src = data.scene_three[0].media_url;
-// 	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
-// }
-
-// async function start() {
-// 	console.log("start");
-// 	let response = await fetch("assets/far_side_cat_fud_mono_too.svg");
-// 	let mySvgData = await response.text();
-// 	document.querySelector(".my_image").innerHTML = mySvgData;
-// 	startManipulatingTheSvg();
-// }
-cl;

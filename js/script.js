@@ -11,71 +11,73 @@ gsap.registerPlugin(MotionPathPlugin);
 
 // start function
 function start() {
-  console.log("start");
-  getData();
+	console.log("start");
+	getData();
 }
 
 async function getData() {
-  const api_url = "json/scenes.json";
-  const response = await fetch(api_url);
-  const data = await response.json();
-  showSceneThree(data);
-  console.log(data);
+	const api_url = "json/scenes.json";
+	const response = await fetch(api_url);
+	const data = await response.json();
+	showSceneThree(data);
+	console.log(data);
 }
 
 // show data from API
 function showSceneOne(data) {
-  // document.querySelector("#scene_three_bg").innerHTML = data;
-  document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
-  showSceneTwo(data);
+	// document.querySelector("#scene_three_bg").innerHTML = data;
+	document.querySelector("#sceneOneText").innerHTML = data.scene_one[2].text;
+	showSceneTwo(data);
 }
 
 // scene 2 show data
 function showSceneTwo(data) {
-  document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
-  showSceneThree(data);
+	document.querySelector("#sceneTwoText").innerHTML = data.scene_two[2].text;
+	showSceneThree(data);
 }
 
 // scene 3 show image
 function showSceneThree(data) {
-  var world_url = data.scene_three[0].media_url;
-  document.querySelector("#worldImg").src += world_url;
-  //document.querySelector("#island").src = data.scene_three[0].media_url;
-  //document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
+	var world_url = data.scene_three[0].media_url;
+	document.querySelector("#worldImg").src += world_url;
+	//document.querySelector("#island").src = data.scene_three[0].media_url;
+	//document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
 }
 
 // modal
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
-  modal.classList.add("hide");
+	modal.classList.add("hide");
 });
 
 function showDetails(data) {
-  console.log(data)
-  modal.querySelector(".modal-name").textContent = data.name;
-  modal.querySelector(".modal-description").textContent = data.longdescription;
-  modal.querySelector(".modal-price").textContent = data.price;
-  modal.classList.remove("hide");
-}
-	const api_url = "img/world_2.svg";
-	let response = await fetch(api_url);
-	let data = await response.text();
-	document.querySelector("#world").innerHTML = data;
-	selectBuildings();
-	// console.log(data);
+	console.log(data);
+	modal.querySelector(".modal-name").textContent = data.name;
+	modal.querySelector(".modal-description").textContent = data.longdescription;
+	modal.querySelector(".modal-price").textContent = data.price;
+	modal.classList.remove("hide");
 }
 
-// select buildings
-function selectBuildings() {
-	console.log("selectBuildings");
-	document.querySelectorAll("#earth, #houseFront").forEach(element => {
-		element.addEventListener("click", function(event) {
-			let chosenPath = event.target;
-			element.classList.add("active");
-			console.log(chosenPath);
-		});
-	});
-}
+// async function getData() {
+// 	const api_url = "img/world_2.svg";
+// 	let response = await fetch(api_url);
+// 	let data = await response.text();
+// 	document.querySelector("#world").innerHTML = data;
+// 	selectBuildings();
+// 	// console.log(data);
+// }
+
+// // select buildings
+// function selectBuildings() {
+// 	console.log("selectBuildings");
+// 	document.querySelectorAll("#earth, #houseFront").forEach(element => {
+// 		element.addEventListener("click", function(event) {
+// 			let chosenPath = event.target;
+// 			element.classList.add("active");
+// 			console.log(chosenPath);
+// 		});
+// 	});
+// }
 
 // // get color
 // function getTheColor() {
@@ -121,4 +123,4 @@ function selectBuildings() {
 // 	document.querySelector(".my_image").innerHTML = mySvgData;
 // 	startManipulatingTheSvg();
 // }
-cl
+cl;

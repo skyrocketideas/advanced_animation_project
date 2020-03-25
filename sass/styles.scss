@@ -131,15 +131,37 @@ img {
 	display: none;
 }
 
-#lightMiddle_2_ {
-	// display: none;
+#houseFront {
 	fill: yellow;
 	stroke: yellow;
 	stroke-width: 10px;
 }
 
-#light_114_ {
-	fill: yellow;
+#earth {
+	transform: scale(1.5);
+	transform-origin: center;
+	// stroke: yellow;
+	// stroke-width: 50px;
+}
+
+#city {
+	transform: scale(1.5);
+	transform-origin: center;
+}
+
+#rotor,
+#rotor-2,
+#rotor-3 {
+	// transform-origin: initial;
+	// transform: rotate(90deg);
+}
+
+#earthWater {
+	fill: green;
+}
+
+#darkBg {
+	display: none;
 }
 
 // #scene_three_bg {

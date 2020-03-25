@@ -16,7 +16,7 @@ function start() {
 }
 
 async function getData() {
-	const api_url = "img/world.svg";
+	const api_url = "img/world_2.svg";
 	let response = await fetch(api_url);
 	let data = await response.text();
 	document.querySelector("#world").innerHTML = data;
@@ -27,7 +27,7 @@ async function getData() {
 // select buildings
 function selectBuildings() {
 	console.log("selectBuildings");
-	document.querySelectorAll("#house_15_, #house_16_").forEach(element => {
+	document.querySelectorAll("#earth, #houseFront").forEach(element => {
 		element.addEventListener("click", function(event) {
 			let chosenPath = event.target;
 			element.classList.add("active");

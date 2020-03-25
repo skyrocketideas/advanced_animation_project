@@ -27,9 +27,9 @@ async function getData() {
 function showSceneThree(data) {
 	console.log("showSceneThree");
 	const world_url = data.scene_three[0].media_url;
-	document.querySelector("#worldImg").innerHTML = world_url;
+	document.querySelector("#worldImg").src = world_url;
 	//document.querySelector("#island").src = data.scene_three[0].media_url;
-	//document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
+	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
 }
 
 // show data from API

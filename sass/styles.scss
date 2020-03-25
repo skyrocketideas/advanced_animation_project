@@ -20,14 +20,7 @@
 	padding: 0;
 }
 
-html {
-	/*Hiding the scroll*/
-	/*overflow-y: hidden;*/
 
-	scroll-snap-type: y mandatory;
-	scroll-snap-align: start;
-	scroll-margin: 0;
-}
 
 .grid {
 	display: grid;
@@ -37,7 +30,7 @@ html {
 	height: auto;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
+
 }
 
 body {
@@ -70,9 +63,8 @@ h1 {
 	grid-row: 1/2;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(5, 1fr);
-	/*scroll-snap-align: center;
 	scroll-behavior: smooth;
-	scroll-margin: 0;*/
+
 
 	img {
 		margin: auto;
@@ -80,7 +72,7 @@ h1 {
 
 	}
 
-	.arrow1 {
+	.arrow_down-screen1 {
 		margin: auto;
 		grid-row: 4;
 		grid-column: 1/ span 13;
@@ -120,19 +112,16 @@ h1 {
 	grid-row: 2 /3;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-	/*scroll-snap-align: center;
 	scroll-behavior: smooth;
-	scroll-margin: 0;*/
-
 	background-color: var(--bg-color-scene-2);
 
-
-	.homeIcon {
+	a {
 		grid-row: 1;
 		grid-column: 1;
 		margin-top: 50px;
 		margin-left: 50px;
 	}
+
 
 	h1 {
 		grid-column: 2 / span 13;
@@ -167,21 +156,24 @@ h1 {
 		justify-self: flex-end;
 	}
 
-	.arrow {
-		width: 50px;
-		height: auto;
-		align-self: center;
-		justify-self: center;
+	img {
+		margin: auto;
+		grid-column: 1 / span 13;
+
 	}
 
-	.left {
-		grid-column: 1;
-		grid-row: 3;
+	.arrow_up-screen2 {
+		margin: auto;
+		grid-row: 1;
+		grid-column: 1/ span 13;
+		margin-top: 50px;
 	}
 
-	.right {
-		grid-column: 12;
-		grid-row: 3;
+	.arrow_down-screen2 {
+		margin: auto;
+		grid-row: 4;
+		grid-column: 1/ span 13;
+		margin-bottom: 50px;
 	}
 
 	/*modal*/
@@ -225,23 +217,21 @@ h1 {
 	width: 100vw;
 	display: grid;
 	grid-column: 1/ span 13;
-	/*scroll-snap-align: center;
-	scroll-behavior: smooth;*/
-
-
-
+	scroll-behavior: smooth;
 
 	.homeIcon2 {
-		margin-left: 50px;
-		grid-row: 4;
+		grid-row: 1;
 		grid-column: 1;
+		margin-top: 50px;
+		margin-left: 50px;
 	}
+
 
 	h1 {
 		margin: auto;
 		grid-column: 1/ span 13;
 
-		margin-top: 100px;
+		margin-top: 200px;
 		color: var(--fourth-color);
 	}
 
@@ -258,12 +248,16 @@ h1 {
 		grid-row: 3/4;
 	}
 
-	.left {
-		grid-row: 2/4;
-		grid-column: 1;
-		align-self: center;
-		justify-self: center;
-		align-items: center;
+	img {
+		margin: auto;
+		grid-row: 1;
+	}
+
+	.arrow_up-screen3 {
+		margin: auto;
+		grid-row: 1;
+		grid-column: 1 / span 13;
+		margin-top: 50px;
 	}
 }
 

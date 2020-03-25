@@ -50,3 +50,17 @@ function showSceneThree(data) {
   //document.querySelector("#island").src = data.scene_three[0].media_url;
   //document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
 }
+
+
+const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
+
+function showDetails(data) {
+  console.log(data)
+  modal.querySelector(".modal-name").textContent = data.name;
+  modal.querySelector(".modal-description").textContent = data.longdescription;
+  modal.querySelector(".modal-price").textContent = data.price;
+  modal.classList.remove("hide");
+}

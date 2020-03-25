@@ -68,9 +68,11 @@ function showDetails(data) {
 */
 
 //ANIMATIONS screen 2
-gsap.to("#birth", {
-  duration: 2,
-  x: 300
+/*Animation lights*/
+gsap.from("#birth", {
+  duration: 10,
+  scale: 0.5,
+  ease: "back"
 });
 
 let space = document.getElementById("space"),

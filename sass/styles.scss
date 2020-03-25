@@ -137,10 +137,11 @@ h1 {
 
 	#birth {
 		height: auto;
-		width: 50%;
+		width: 40%;
 		grid-column: 7 / span 13;
 		grid-row: 1/5;
 		z-index: 1;
+
 	}
 
 	#shape {
@@ -152,6 +153,7 @@ h1 {
 	}
 
 	/*Animations*/
+	/*Animation lights*/
 	#space {
 
 		clip-path: circle(500px at center);
@@ -164,6 +166,7 @@ h1 {
 		grid-row: 1/ span 5;
 		place-items: center center;
 		overflow: hidden;
+
 
 		--perspective: 0px;
 		perspective: var(--perspective);

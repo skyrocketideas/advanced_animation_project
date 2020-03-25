@@ -121,26 +121,38 @@ img {
 	grid-column: 1 / 13;
 }
 
-.active {
-	display: none;
+// keyframe for glowing animation
+@keyframes glowAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
-#houseFront {
-	fill: yellow;
+// sass mixin for glow
+@mixin glowing {
 	stroke: yellow;
-	stroke-width: 10px;
+	stroke-width: 50px;
+	animation: glowAnim 1s ease infinite alternate;
 }
 
-#earth {
-	transform: scale(1.5);
-	transform-origin: center;
-	// stroke: yellow;
-	// stroke-width: 50px;
+// active class for element clicked
+.active {
+	@include glowing;
 }
 
+#earth,
 #city {
 	transform: scale(1.5);
 	transform-origin: center;
+}
+
+circle {
+	stroke: red;
+	stroke-width: 20px;
 }
 
 #rotor,

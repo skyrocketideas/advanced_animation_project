@@ -15,20 +15,42 @@ function start() {
 	getData();
 }
 
+// get data from JSON
 async function getData() {
 	const api_url = "json/scenes.json";
 	const response = await fetch(api_url);
 	const data = await response.json();
 	showSceneThree(data);
+	loadSceneThreeSVG();
 	console.log(data);
 }
 
-// scene 3 show image
+// load svg
+async function loadSceneThreeSVG() {
+	console.log("loadSceneThreeSVG");
+	let response = await fetch("img/world.svg");
+	let mySvgData = await response.text();
+	document.querySelector("#worldImg").innerHTML = mySvgData;
+	selectBuildings();
+}
+
+// // select buildings
+function selectBuildings() {
+	console.log("selectBuildings");
+	document.querySelectorAll("#earth, #house, #houseFront").forEach(element => {
+		element.addEventListener("click", function(event) {
+			let chosenPath = event.target;
+			element.classList.add("active");
+			console.log(chosenPath);
+		});
+	});
+}
+
+// // scene 3 show image
 function showSceneThree(data) {
 	console.log("showSceneThree");
-	const world_url = data.scene_three[0].media_url;
-	document.querySelector("#worldImg").src = world_url;
-	//document.querySelector("#island").src = data.scene_three[0].media_url;
+	// const world_url = data.scene_three[0].media_url;
+	// document.querySelector("#worldImg").src = world_url;
 	document.querySelector("#sceneThreeText").innerHTML = data.scene_three[2].text;
 }
 

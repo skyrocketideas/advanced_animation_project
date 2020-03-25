@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,23 +9,35 @@
 
   <body>
     <div class="grid">
+      <!--Scene 1-->
       <section id="sceneOne">
-        <h1 class="scene_heading"></h1>
-        <p>
-          Griaß di! Weichteile und Gedudel frickeln fidel Muckefuck. Missetäter
-          und Früchtchen erquicken verhärmt Kokolores. Das gebeutelt Stümper.
-          Die Luder bauchpinseln die hochgestochen Bagage. Das halbstark
-          Schnösel lustwandeln. Günstling und Schlachtenbummler festnageln
-          piesacken Kaiserwetter. Der Wuchtbrumme festnageln der pfundig
-          Stümper. Die rosig Waschweib dengeln. Die frivol Eisbein auftakeln.
-          Sättigungsbeilage und Naschkatze lobpreisen ausgemergelt Naseweis. Der
-          Hatz berappen die emsig Kohlroulade. Der pomadig Thusnelda. Das
-          Thusnelda bohnern der gebeutelt Falscher Hase. Wendehals und Falscher
-          Hase liebkosen gemach Flickschusterei. Die gebeutelt Hupfdohle.
-          Maulaffen feilhalten!
-        </p>
+        <img id="how-the" src="static/img/how_the.svg" alt="how the text" />
+        <img
+          id="lightBulb"
+          src="static/img/lightBulb.svg"
+          alt="light bulb text"
+        />
+        <img id="changed" src="static/img/changed.svg" alt="changed text" />
+        <img
+          id="the-world"
+          src="static/img/the_world.svg"
+          alt="the world text"
+        />
+
+        <a href="#sceneTwo" class="arrow1">
+          <img src="static/img/arrow_right.png" alt="arrow right" />
+        </a>
       </section>
+
+      <!--Scene 2-->
       <section id="sceneTwo">
+        <a href="#sceneOne">
+          <img
+            class="homeIcon"
+            src="static/img/home_icon.svg"
+            alt="home icon"
+          />
+        </a>
         <h1 class="scene_heading">Let there be light</h1>
         <p>
           Glück Auf! Prahlhans und Kerbholz bauchpinseln blümerant Rächer.
@@ -41,61 +52,49 @@
           und Haudegen schlampampen frivol Sättigungsbeilage. Die nichtsnutzig
           Tohuwabohu. Mein lieber Scholli!
         </p>
-        <img id="birth" src="static/img/lightbulb_screens2.png" alt="" />
         <button>More</button>
-        <img
-          class="arrow left"
-          src="static/img/arrow_left.png"
-          alt="arrow left"
-        />
-        <img
-          class="arrow right"
-          src="static/img/arrow_right.png"
-          alt="arrow right"
-        />
+
+        <img id="birth" src="static/img/birth.svg" alt="" />
+
+        <a href="#sceneOne" class="arrow left">
+          <img src="static/img/arrow_left.png" alt="arrow left" />
+        </a>
+        <a href="#sceneThree" class="arrow right">
+          <img src="static/img/arrow_right.png" alt="arrow right" />
+        </a>
+
+        <div class="modal-background hide">
+          <div class="modal-content">
+            <h3 class="modal-name"></h3>
+            <img src="" alt="" class="modal-image" />
+            <p class="modal-description"></p>
+          </div>
+        </div>
       </section>
+
+      <!--Scene 3-->
       <section id="sceneThree">
-        <h1 class="scene_heading"></h1>
-        <p>
-          Gott zum Gruße! Das gebeutelt Absacker. Der Wichtigtuerei duellieren
-          der halsstarrig Waschweib. Schäferstündchen und Abort schlampampen
-          hochnäsig Franzosenkrankheit. Die schamlos Ohrenschmaus. Der töricht
-          Gesinde jauchzen. Das töricht Humbug. Die hold Promenadenmischung
-          gutheißen. Der rosig Waschweib. Das Fressalien schlampampen die
-          einfältig Geschmeide. Die Kleinod stibitzen das fidel Autobahn. Der
-          bräsig Haudegen. Der Schelm frickeln der grobschlächtig Fuchtel.
-          Maulaffen feilhalten!
-        </p>
+        <a href="#sceneOne">
+          <img
+            class="homeIcon2"
+            src="static/img/home_icon.svg"
+            alt="home icon"
+          />
+        </a>
+        <h1 class="scene_heading">Some title here</h1>
+        <!--
+      <img id="worldImg" src="static/img/world2.svg" alt="world pic">
+      <img id="stars" src="static/img/stars2.svg" alt="stars pic">
+    -->
+        <img id="worldImg" src="" alt="world pic" />
+
+        <a href="#sceneTwo" class="left">
+          <img src="static/img/arrow_left.png" alt="arrow left" />
+        </a>
       </section>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
   <script src="js/script.js"></script>
-=======
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="sass/styles.scss" />
-		<title>How The Lightbulb Changed The World</title>
-	</head>
-	<body>
-		<section id="sceneOne">
-			<h1 class="scene_heading"></h1>
-			<div id="sceneOneText"></div>
-		</section>
-		<section id="sceneTwo">
-			<h1 class="scene_heading"></h1>
-			<div id="sceneTwoText"></div>
-		</section>
-		<section id="sceneThree">
-			<h1 class="scene_heading"></h1>
-			<div id="sceneThreeText"></div>
-			<img id="island"></div>
-		</section>
-	</body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
-	<script src="js/script.js"></script>
->>>>>>> graeme
 </html>

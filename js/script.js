@@ -16,24 +16,24 @@ function start() {
 }
 
 async function getData() {
-	const api_url = "img/world_2.svg";
-	let response = await fetch(api_url);
-	let data = await response.text();
-	document.querySelector("#world").innerHTML = data;
-	selectBuildings();
-	// console.log(data);
+  const api_url = "img/world_2.svg";
+  let response = await fetch(api_url);
+  let data = await response.text();
+  document.querySelector("#world").innerHTML = data;
+  selectBuildings();
+  // console.log(data);
 }
 
 // select buildings
 function selectBuildings() {
-	console.log("selectBuildings");
-	document.querySelectorAll("#earth, #houseFront").forEach(element => {
-		element.addEventListener("click", function(event) {
-			let chosenPath = event.target;
-			element.classList.add("active");
-			console.log(chosenPath);
-		});
-	});
+  console.log("selectBuildings");
+  document.querySelectorAll("#earth, #houseFront").forEach(element => {
+    element.addEventListener("click", function (event) {
+      let chosenPath = event.target;
+      element.classList.add("active");
+      console.log(chosenPath);
+    });
+  });
 }
 
 // // get color
@@ -81,12 +81,12 @@ function selectBuildings() {
 // 	startManipulatingTheSvg();
 // }
 
-  const api_url = "json/scenes.json";
-  const response = await fetch(api_url);
-  const data = await response.json();
-  showSceneThree(data);
-  console.log(data);
-}
+const api_url = "json/scenes.json";
+const response = await fetch(api_url);
+const data = await response.json();
+showSceneThree(data);
+console.log(data);
+
 
 // or ...
 // can we do this?
@@ -129,7 +129,6 @@ function showDetails(data) {
   modal.querySelector(".modal-price").textContent = data.price;
   modal.classList.remove("hide");
 }
-<<<<<<< HEAD
 */
 
 //ANIMATIONS screen 2
@@ -187,5 +186,3 @@ function makeStar() {
 for (let i = 0; i < 200; i++) {
   makeStar();
 }
-=======
->>>>>>> master

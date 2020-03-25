@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", start);
 gsap.registerPlugin(MotionPathPlugin);
 
 // gsap test animation
-// gsap.from(".anim", { duration: 3, stagger: 1, y: 100 });
+gsap.from(".anim", { duration: 2, stagger: 1, y: 100, opacity: 0 });
 
 // start function
 function start() {
@@ -31,6 +31,7 @@ async function loadSceneThreeSVG() {
 	let response = await fetch("img/world.svg");
 	let mySvgData = await response.text();
 	document.querySelector("#worldImg").innerHTML = mySvgData;
+	// document.querySelector("#worldImgBg").innerHTML = mySvgData;
 	selectBuildings();
 }
 

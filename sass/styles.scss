@@ -141,7 +141,9 @@ img {
 
 // active class for element clicked
 .active {
-	@include glowing;
+	// @include glowing;
+	filter: url(#pictureFilter);
+	// filter: grayscale(1);
 }
 
 #earth,
@@ -152,7 +154,8 @@ img {
 
 circle {
 	stroke: red;
-	stroke-width: 20px;
+	stroke-width: 50px;
+	stroke-opacity: 0.4;
 }
 
 #rotor,
@@ -164,6 +167,7 @@ circle {
 
 #earthWater {
 	fill: green;
+	filter: grayscale(1);
 }
 
 #darkBg {

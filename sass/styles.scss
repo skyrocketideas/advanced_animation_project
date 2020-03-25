@@ -109,12 +109,6 @@ img {
 	}
 }
 
-#sceneOneText,
-#sceneTwoText,
-#sceneThreeText {
-	font-size: 2rem;
-}
-
 #sceneThree {
 	background-color: var(--bg-color-scene-3);
 	height: 100vh;
@@ -123,7 +117,7 @@ img {
 	grid-row: 3;
 }
 
-#island {
+#worldImg {
 	grid-column: 1 / 13;
 }
 
